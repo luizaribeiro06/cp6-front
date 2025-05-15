@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CP6 - FrontEnd</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <header id="inicio">
+    <nav>
+        <div class="nav_geral">
+        <div><a class="logo" href="#"><h1>CP 3</h1></a></div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#integrantes">Integrantes</a></li>
+        <li><a href="#pokemons">Pokemons</a></li>
+        <li><a href="#cartas">Cartas</a></li>
+      </ul>
+    </div>
+    </nav>
+  </header>
+
+  <section class="inicio-section">
+    <div class="moldura-titulo">
+      <h1>Checkpoint Project</h1>
+    </div>
+    <button id="startBtn">Start</button>
+  </section>
+
+  <section id="integrantes">
+    <h2>Choose your character</h2>
+    <div class="integrantes-box">
+      <div class="integrante">João Victor Ferreira - 560439</div>
+      <div class="integrante">Gabrielly Candido - 560916</div>
+      <div class="integrante">Luiza Ribeiro - 560200</div>
+    </div>
+  </section>
+
+  <section id="pokemons">
+    <div class="pokemons-content"> 
+        <h3>Descubra os pokemons</h3>
+        <aside>
+          <ul>
+            <li class="filtro">Todos</li>
+            <li class="filtro">Água</li>
+            <li class="filtro">Fogo</li>
+            <li class="filtro">Planta</li>
+            <li class="filtro">Elétrico</li>
+            <li class="filtro">Gelo</li>
+          </ul>
+        </aside>
+    </div>
+    <div class="pokemon-grid">
+      <img src="./assets/imgs/charmander.png" data-nome="charmander" alt="">
+      <img src="./assets/imgs/bulbasaur.png" data-nome="bulbasaur">
+      <img src= "./assets/imgs/abra.png" data-nome="abra">
+      <img src= "./assets/imgs/squirtle.png" data-nome="squirtle">
+      <img  src= "./assets/imgs/clefairy.png" data-nome="clefairy">
+      <img src= "./assets/imgs/growlithe.png" data-nome="growlithe">
+      <img src= "./assets/imgs/swablu.png" data-nome="swablu">
+      <img src= "./assets/imgs/snorlax.png" data-nome="snorlax">
+      <img src= "./assets/imgs/caterpie.png" data-nome="caterpie">
+      <img src= "./assets/imgs/jigglypuff.png" data-nome="jigglypuff">
+      <img src= "./assets/imgs/lapras.png" data-nome="lapras">
+      <img src= "./assets/imgs/ponyta.png" data-nome="ponyta">
+      <img src= "./assets/imgs/eevee.png" data-nome="eevee">
+      <img src= "./assets/imgs/krabby.png" data-nome="krabby">
+      <img src= "./assets/imgs/pidgey.png" data-nome="pidgey">
+      <img src="./assets/imgs/pikachu.png" data-nome="pikachu">
+    </div>
+
+    <div id="pokemonModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-container">
+          <span class="close" id="closeModal">&times;</span>
+        <h4 id="pokemon-name"></h4>
+        <div class="modal-body">
+          <div class="infos">
+            <div class="info-left">
+              <p class="p-modal">Altura: <span class="p-modal" id="pokemon-altura"></span></p>
+              <p class="p-modal">Peso: <span class="p-modal" id="pokemon-peso"></span></p>
+              <p class="p-modal">Categoria: <span class="p-modal" id="pokemon-categoria"></span></p>
+            </div>
+            <div class="info-right">
+              <p class="p-modal">Tipo: <span class="p-modal" id="pokemon-tipo"></span></p>
+              <p class="p-modal">Habilidades: <span class="p-modal" id="pokemon-habilidade"></span></p>
+              <p class="p-modal">Fraqueza: <span class="p-modal" id="pokemon-fraqueza"></span></p>
+            </div>
+          </div>
+          <div class="evolucao" id="pokemon-evolucao"></div>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </section>
+
+  <section id="cartas">
+    <div class="content"> 
+      <h3>Crie sua própria carta especial</h3>
+      <form id="form-carta">
+        <div class="cards-content">
+          <div class="content-left"> 
+            <label for="nome">Nome da carta:</label>
+            <input type="text" id="nome" name="nome">
+  
+            <label for="pokemon">Pokemon:</label>
+            <select id="pokemon" name="pokemon">
+              <option disabled selected>Selecione o pokemon</option>
+              <option value="Bulbasaur">Bulbasaur</option>
+              <option value="Charmander">Charmander</option>
+              <option value="Abra">Abra</option>
+              <option value="Squirtle">Squirtle</option>
+              <option value="Clefairy">Clefairy</option>
+              <option value="Growlithe">Growlithe</option>
+              <option value="Swablu">Swablu</option>
+              <option value="Snorlax">Snorlax</option>
+              <option value="Caterpie">Caterpie</option>
+              <option value="Jigglypuff">Jigglypuff</option>
+              <option value="Lapras">Lapras</option>
+              <option value="Ponyta">Ponyta</option>
+              <option value="Eevee">Eevee</option>
+              <option value="Krabby">Krabby</option>
+              <option value="Pidgey">Pidgey</option>
+              <option value="Pikachu">Pikachu</option>
+            </select>
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria">
+              <option disabled selected>Selecione a categoria</option>
+              <option value="Água">Água</option>
+              <option value="Fogo">Fogo</option>
+              <option value="Planta">Planta</option>
+              <option value="Elétrico">Elétrico</option>
+              <option value="Gelo">Gelo</option>
+              <option value="Fada">Fada</option>
+              <option value="Normal">Normal</option>
+              <option value="Psíquico">Psíquico</option>
+              <option value="Voador">Voador</option>
+            </select>
+          </div>
+  
+          <div class="content-right"> 
+            <label for="vida">Quantidade de vida:</label>
+            <input type="text" id="vida" name="vida">
+            <label for="ataque">Ataque:</label>
+            <input type="text" id="ataque" name="ataque">
+            <label for="resistencia">Resistência:</label>
+            <input type="text" id="resistencia" name="resistencia">
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <div class="img">
+      <div class="carta-container">
+        <img src="./assets/imgs/card.png" alt="Carta Pokémon" class="carta-fundo">
+        <img id="pokemon-carta-imagem" class="carta-pokemon-img" src="" alt="">
+        <div class="campo nome" id="campo-nome"></div>
+        <div class="campo vida" id="campo-vida"></div>
+        <div class="campo ataque" id="campo-ataque"></div>
+        <div class="campo resistencia" id="campo-resistencia"></div>
+        <div class="campo categoria" id="pokemon-carta-categoria"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-img">
+        <img src="./assets/imgs/footer-banner.jpg" alt="" class="footer-banner">
+    </div>
+    <div class="footer-text">
+    <h3>Explore e divirta-se</h3>
+    <div class="text-content"> 
+        <div class="content-left">
+            <p>1º ano - Engenharia de Software</p>
+            <p>FIAP - Paulista</p>
+            <p>São Paulo - SP</p>
+          </div>
+          <div class="content-right">
+            <p>Telefone: (12) 3456-7890</p>
+            <p>E-mail: checkpoint@fiap.com.br</p>
+            <p>Redes sociais: @checkpoint</p>
+          </div>
+        </div>
+    </div>     
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

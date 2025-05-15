@@ -1,0 +1,755 @@
+/*fonte dos títulos*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*fonte dos textos*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0 ;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+  background-color: #FBF6F3;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4{
+  font-family: "Press Start 2P";
+}
+
+
+h2{
+  font-size: 2.6rem;
+  line-height: -2px;
+}
+
+h3{
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h4{
+  font-size: 1.5rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 100px;
+  color: black;
+  border: solid 0.2rem black;
+  z-index: 1000;
+}
+
+.nav_geral{
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+nav .logo {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-size: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav h1{
+  color: black;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.inicio-section {
+  text-align: center;
+  margin-top: 60px;
+  padding: 60px 5vw;
+  background-image: url("./imgs/banner-full.png"), linear-gradient(#27a3ff, #e4ffff);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100vw;
+}
+
+.moldura-titulo {
+  width: 600px;
+  height: 260px;
+  background: url("./imgs/moldura.png") no-repeat center center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.moldura-titulo h1 {
+  font-size: 3.3rem;
+  line-height: 1.3; /*estava sendo solicitado 1.3 rem, mas não faz sentido pois o espaçamento entre as linhas sempre precisa ser do mesmo tamanho da fonte ou maior, por isso coloquei 1.3*/
+  margin: 0;
+  padding: 20px 30px; 
+  z-index: 1;
+  position: relative;
+  text-align: center;
+}
+
+.inicio-section button {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  line-height: -2px;
+  padding: 10px 50px;
+  cursor: pointer;
+  border: solid 0.2rem black;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.158), inset -2px -2px 0 rgba(0, 0, 0, 0.205);
+  font-family: "Noto Serif";
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#integrantes {
+  text-align: center;
+  padding: 60px 5vw;
+}
+  
+#integrantes h2 {
+  color: white;
+  text-shadow:
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px  3px 0 #000,
+    3px  3px 0 #000;
+  margin-bottom: 70px;
+}
+  
+.integrantes-box {
+  border: 2px solid black;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.692), inset -2px -2px 0 rgba(0, 0, 0, 0.212);
+}
+  
+.integrantes-box .integrante {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: 'Noto Serif', serif;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+  
+.integrantes-box .integrante:hover::before {
+  content: '';
+  display: block;
+  background-image: url("./imgs/seta-hover.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+  
+#pokemons {
+  display: flex;
+  padding: 60px 5vw;
+  gap: 40px;
+  background-color: #6D86DD;
+}
+  
+.pokemons-content {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  gap: 40px;
+  font-family: 'Press Start 2P', cursive;
+  flex: 1;
+}
+  
+#pokemons h3 {
+  color: white;
+}
+
+#pokemons aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1rem;
+  color: white;
+  width: 100%; 
+  box-sizing: border-box;
+}
+      
+#pokemons aside ul li {
+  position: relative;
+  cursor: pointer;
+}
+      
+#pokemons aside ul li:hover {
+  color: black;
+}
+      
+#pokemons aside ul li:hover::before {
+  content: '';
+  position: absolute;
+  left: -7%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-image: url("./imgs/seta-hover.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+      
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 10px; 
+  max-width: 800px;
+  max-height: 500px;
+  place-items: center
+}
+    
+.pokemon-grid img {
+  width: 60%;
+  height: auto;
+}
+    
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+    
+.modal-content {
+  display: flex;
+  background-color: #fff;
+  margin: 5% auto;
+  border-radius: 20px;
+  width: 50vw;
+  position: relative;
+  height: 70vh;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.modal-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+    
+.modal-content h4 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000;
+}
+    
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+    
+.infos{
+  display: flex;
+  gap: 70px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-modal{
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.modal-body .info-left, .info-right {
+  font-size: 0.9rem;
+}
+    
+.modal-body .evolucao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+    
+.modal-body .evolucao img {
+  height: 80px;
+}
+    
+.modal-body .evolucao span {
+  font-size: 1.5rem;
+}
+    
+.close {
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  color: black;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+}
+    
+#cartas {
+  background-color: #fef6f3;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 5vw;
+}
+  
+#cartas .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+  
+#cartas h3 {
+  color: black;
+  max-width: 30vw;
+}
+  
+.cards-content {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+    
+}
+
+.content-left,
+.content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+  
+#cartas form input,
+#cartas form select {
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 1.15rem;
+  border: 1px solid #ccc;
+}
+  
+#cartas form button {
+  background-color: #7CAAC9;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 8px;
+  align-self: flex-start;
+ }
+  
+#cartas form button:hover {
+  background-color: #5881AE;
+}
+  
+#cartas .img img {
+  max-width: 300px;
+  height: auto;
+}
+  
+.carta-container {
+  position: relative;
+  width: 300px;
+}
+  
+.carta-fundo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+  
+.carta-pokemon-img {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  z-index: 1;
+}
+  
+.campo {
+  position: absolute;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  color: black;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+  
+.nome {
+  top: 35px;
+  left: -25%;
+  font-size: 0.8rem;
+}
+  
+.vida {
+  top: 35px;
+  right: 55px;
+  text-align: right;
+  width: auto;
+}
+  
+.ataque {
+  bottom: 150px;
+  left: 10%;
+  text-align: left;
+  width: auto;
+}
+  
+.resistencia {
+  bottom: 130px;
+  left: 10%;
+  text-align: left;
+  width: auto;
+}
+  
+.categoria {
+  bottom: 110px;
+  left: 10%;
+  text-align: left;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #6D86DD;
+  color: white;
+}
+
+.footer-banner{
+  width: 100%;
+  object-fit: contain;
+}
+  
+.footer-text {
+  text-align: left;
+  padding: 50px 5vw;
+}
+
+.text-content{
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+  
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+}
+
+@media (max-width: 1024px) {
+
+  h2{
+    line-height: 1.3;
+  }
+     
+  /*inicio section*/
+  .moldura-titulo h1{
+    font-size: 2.9rem;
+  }
+
+  /*section pokemons*/
+  #pokemons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pokemon-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .pokemons-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  #pokemons aside ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+  #pokemons aside ul li:hover::before {
+    left: -25%;
+  }
+  .modal-content {
+    width: 60vw;
+    height: 80vh;
+  }
+
+  /*section form*/    
+  #cartas {
+    width: 100vw;
+  }
+  #cartas .content {
+    width: 50vw;   
+  }
+  #cartas h3 {
+    max-width: 40vw;
+  }
+  #cartas form input,
+  #cartas form select {
+    padding: 10px;
+    font-size: 1rem;
+    width: 25vw;
+  }
+}   
+
+@media (max-width: 768px) {
+  h2{
+    font-size: 2.3rem;
+    line-height: 1.3;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1rem;
+  }
+
+  /*inicio section*/
+  .moldura-titulo{
+    width: 80vw
+  }
+  .moldura-titulo h1 {
+    font-size: 2rem;
+  }
+
+  /*section integrantes*/
+  #integrantes h2 {
+    margin-bottom: 40px;
+  }
+
+  /*section pokemons*/
+  .pokemon-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }  
+  #pokemons {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }  
+  .pokemons-content {
+    height: 100vh;
+    width: 250px;
+  }
+  #pokemons h1 {
+    font-size: 1.5rem;
+    width: 100vw;
+  }
+  #pokemons aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1rem;
+    color: white;
+  }
+  #pokemons aside ul li:hover::before {
+    left: -25%;
+  }  
+  #cartas form input,
+  #cartas form select {
+    padding: 10px;
+    font-size: 1.15rem;
+    width: 80vw;
+  }   
+  .modal-content {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+}
+
+/*section form*/
+.cards-content {
+    flex-direction: column;
+  }
+  #cartas {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  #cartas .content{
+    width: 80vw;
+  }
+  #cartas h3 {
+    max-width: 60vw;
+  }
+
+@media (max-width: 480px) {
+
+  h4{
+    font-size: 1rem;
+  }
+
+  h3{
+    font-size: 1.3rem;
+  }
+
+  h2{
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+
+  /*section inicio*/   
+  .inicio-section{
+    height: 50vh;
+  }
+
+  .moldura-titulo h1 {
+    font-size: 2rem;
+  }
+
+  .moldura-titulo{
+    width: 90vw;
+    height: 40vh
+  }
+
+  /*section integrantes*/
+  #integrantes .integrante{
+    font-size: 1rem;
+  }
+  .integrantes-box .integrante:hover::before {
+    left: 0;
+  }
+    
+  /*section pokemons*/
+  #pokemons h2{
+    font-size: 2rem;
+  }
+  .text-content {
+    flex-direction: column;
+  }
+  #cartas{
+    padding: 20px;
+  }
+  .modal-content {
+    width: 90vw;
+    height: 80vh;
+    padding: 20px;
+  }
+  .infos{
+    gap:5px;
+  }
+}
+
+
+
+/*nav*/
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 20px;
+    margin: 0;
+  }
+
+  .nav_geral {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    margin: 0 auto;
+    width: 100vw;
+    background-color: white;
+    z-index: 999;
+    text-align: center;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  nav ul.show {
+    display: flex;
+    width: 100vw;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
